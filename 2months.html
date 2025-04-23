@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Are You Okay?</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(white 5px, transparent 6px),
+                        radial-gradient(white 5px, transparent 6px),
+                        radial-gradient(white 5px, transparent 6px);
+      background-size: 20px 20px;
+      animation: sparkleFall 20s linear infinite, sparkleTwinkle 2s ease-in-out infinite;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    @keyframes sparkleFall {
+      0% {
+        background-position: 0 0, 10px -100px, 20px -200px;
+      }
+      100% {
+        background-position: 0 100vh, 10px 0vh, 20px -100vh;
+      }
+    }
+
+    @keyframes sparkleTwinkle {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+
+    .main-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+      border-radius: 10px;
+    }
+
+    #yesButton {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #noButton {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .image-boxes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .image-boxes img {
+      object-fit: cover;
+      border-radius: 10px;
+      position: absolute;
+    }
+
+    .small-img {
+      width: 10vw;
+      height: 20vh;
+    }
+
+    .large-img {
+      width: 20vw;
+      height: 25vh;
+    }
+
+    /* Position images */
+    .image1 { top: 5%; left: 10%; }
+    .image2 { top: 5%; right: 10%; }
+    .image3 { bottom: 5%; left: 10%; }
+    .image4 { bottom: 5%; right: 5%; }
+    .image5 { bottom: 5%; right: 15%; }
+    .image6 { bottom: 5%; right: 25%; }
+    .image7 { bottom: 5%; right: 35%; }
+
+    .text-bubble {
+      position: relative;
+      margin-top: 1rem;
+      background-color: white;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: 10%;
+    }
+
+    .text-bubble img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    @media (max-width: 768px) {
+      .buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <h1>Em có yêu anh không?</h1>
+    <div class="buttons">
+      <button id="yesButton">Yes</button>
+      <button id="noButton">No</button>
+    </div>
+  </div>
+
+  <div class="image-boxes">
+    <img src="images/elevator.jpeg" alt="Couple in elevator" class="large-img image1"/>
+    <img src="images/japan.png" alt="Trip to Japan" class="large-img image2"/>
+    <img src="images/491023372_1173481000735043_7448885827999177598_n.jpg" alt="Fun moment" class="small-img image3"/>
+    <img src="images/491001522_997532625861885_623998556308475691_n.jpg" alt="Candid photo" class="small-img image4"/>
+    <img src="images/490900624_984445157195931_3329313804504277306_n.jpg" alt="Smiling memory" class="small-img image5"/>
+    <img src="images/490988572_860343852931751_613638489328277185_n.jpg" alt="Happy day" class="small-img image6"/>
+    <img src="images/491024495_708592001841354_1511183722525409982_n.jpg" alt="Cute moment" class="small-img image7"/>
+  </div>
+
+  <div id="textBubbleContainer"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  const yesBtn = document.getElementById('yesButton');
+  const noBtn = document.getElementById('noButton');
+  const textBubbleContainer = document.getElementById('textBubbleContainer');
+  const styleTag = document.createElement('style');
+  document.head.appendChild(styleTag);
+
+  const MAX_CLICKS = 5;
+  let noClickCount = 0;
+
+  const puppyImages = [
+    'https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/6463495fee62367430342687_78.png',
+    'https://images.emojiterra.com/google/android-10/512px/1f97a.png',
+    'https://static.wikia.nocookie.net/674ea14b-ea4a-481a-90a6-1e9130806d0f/scale-to-width/755',
+    'https://anhnail.vn/wp-content/uploads/2025/02/meme-liec-1.webp'
+  ];
+
+  const texts = [
+    '😏😏😏😏😏😏😏😏😏😏😏😏😏',
+    'Ủaaaaaa, bấm lộn rồi 😢',
+    'Em!! K giỡn nhe -_-',
+    'Em giám!!!',
+    'Emmmmmmmmmmmmmmmmmm 😢',
+  ];
+
+  function updateShakeAnimation(scale, intensity) {
+    const animationName = `shakeScale${noClickCount}`;
+    styleTag.textContent = `
+      @keyframes ${animationName} {
+        0% { transform: scale(${scale}) rotate(0deg) translate(0, 0); }
+        20% { transform: scale(${scale}) rotate(-2deg) translate(-3px, 3px); }
+        40% { transform: scale(${scale}) rotate(2deg) translate(3px, -3px); }
+        60% { transform: scale(${scale}) rotate(-2deg) translate(-3px, -3px); }
+        80% { transform: scale(${scale}) rotate(2deg) translate(3px, 3px); }
+        100% { transform: scale(${scale}) rotate(0deg) translate(0, 0); }
+      }
+    `;
+    yesBtn.style.animation = `${animationName} ${intensity}s infinite ease-in-out`;
+  }
+
+  noBtn.addEventListener('click', () => {
+    noClickCount++;
+    const scale = 1 + noClickCount * 0.3;
+    const intensity = 0.3 + noClickCount * 0.05;
+
+    updateShakeAnimation(scale, intensity);
+
+    textBubbleContainer.innerHTML = ''; // Clear previous bubble
+
+    const textBubble = document.createElement('div');
+    textBubble.className = 'text-bubble';
+    textBubble.innerHTML = `
+      <img src="${puppyImages[noClickCount % puppyImages.length]}" alt="Puppy Eyes" />
+      <span>${texts[noClickCount % texts.length]}</span>
+    `;
+    textBubbleContainer.appendChild(textBubble);
+
+
+    if (noClickCount >= MAX_CLICKS) {
+      yesBtn.style.position = 'fixed';
+      yesBtn.style.top = '0';
+      yesBtn.style.left = '0';
+      yesBtn.style.width = '25vw';
+      yesBtn.style.height = '25vh';
+      yesBtn.style.fontSize = '5rem';
+      yesBtn.style.borderRadius = '0';
+      yesBtn.innerText = 'YES!!!';
+      noBtn.style.display = 'none';
+    }
+  });
+
+  yesBtn.addEventListener('click', () => {
+    // Show alert
+    alert('Liệu hồn em!!');
+
+    // Fire confetti burst 🎉
+    confetti({
+      particleCount: 300,
+      spread: 100,
+      origin: { y: 0.6 }
+    });
+
+    // Reset everything
+    yesBtn.removeAttribute('style');
+    yesBtn.innerText = 'Yes';
+    yesBtn.style.animation = 'bounce 1s ease-in-out infinite';
+    noBtn.style.display = 'inline-block';
+    noClickCount = 0;
+    styleTag.textContent = '';
+    textBubbleContainer.innerHTML = '';
+  });
+
+  // Extra dramatic pulse + bounce animation
+  const keyframes = `
+    @keyframes bounce {
+      0%, 100% {
+        transform: scale(1) translateY(0);
+      }
+      50% {
+        transform: scale(1.2) translateY(-10px);
+      }
+    }
+  `;
+  const bounceStyle = document.createElement('style');
+  bounceStyle.textContent = keyframes;
+  document.head.appendChild(bounceStyle);
+
+  yesBtn.style.animation = 'bounce 1.5s ease-in-out infinite';
+</script>
+
+</body>
+</html>
