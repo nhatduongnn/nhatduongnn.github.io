@@ -234,6 +234,8 @@
 
     updateShakeAnimation(scale, intensity);
 
+    textBubbleContainer.innerHTML = ''; // Clear previous bubble
+
     const textBubble = document.createElement('div');
     textBubble.className = 'text-bubble';
     textBubble.innerHTML = `
@@ -241,6 +243,7 @@
       <span>${texts[noClickCount % texts.length]}</span>
     `;
     textBubbleContainer.appendChild(textBubble);
+
 
     if (noClickCount >= MAX_CLICKS) {
       yesBtn.style.position = 'fixed';
