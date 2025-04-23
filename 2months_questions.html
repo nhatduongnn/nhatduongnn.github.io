@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2 Months Date</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #ffe6f0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: radial-gradient(white 5px, transparent 6px),
+                        radial-gradient(white 5px, transparent 6px),
+                        radial-gradient(white 5px, transparent 6px);
+      background-size: 20px 20px;
+      animation: sparkleFall 20s linear infinite, sparkleTwinkle 2s ease-in-out infinite;
+      z-index: 0;
+      opacity: 0.5;
+    }
+
+    @keyframes sparkleFall {
+      0% { background-position: 0 0, 10px -100px, 20px -200px; }
+      100% { background-position: 0 100vh, 10px 0vh, 20px -100vh; }
+    }
+
+    @keyframes sparkleTwinkle {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    .content {
+      z-index: 1;
+      position: relative;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      color: #f44336;
+    }
+
+    ul {
+      list-style: heart;
+      text-align: left;
+    }
+
+    li {
+      padding: 0.5rem 0;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h1>2 Months Together 💕</h1>
+    <ul>
+      <li>If you could relive one day in our relationship, what would it be?</li>
+      <li>If we won $5 million today, how would we spend it?</li>
+      <li>If we turned our love story into a movie, what would the title be?</li>
+      <li>What would our dream vacation look like if we had unlimited resources?</li>
+      <li>If we could only eat one meal every day for a year, what would it be?</li>
+      <li>If we switched lives for a week, what would you struggle with most?</li>
+      <li>What would you ask if we could have dinner with our future selves in 20 years?</li>
+      <li>If you could change one thing about our first date, what would it be?</li>
+      <li>If you could describe our relationship as a book genre, what would it be?</li>
+      <li>Where is your happy place and why? Describe it physically.</li>
+      <li>If we were stuck on a desert island together, what natural strengths would you bring to the table to help us survive?</li>
+      <li>What does your dream home look like?</li>
+    </ul>
+  </div>
+</body>
+</html>
