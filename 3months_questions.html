@@ -43,12 +43,49 @@
       50% { opacity: 0.6; }
     }
 
+    .content-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      padding: 2rem 1rem;
+      gap: 1rem;
+    }
+
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .image-column img {
+      width: 80px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transform: rotate(-10deg);
+      transition: transform 0.3s ease;
+    }
+
+    .image-column.right img {
+      transform: rotate(10deg);
+    }
+
+    .image-column img:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
     .content {
       z-index: 1;
       position: relative;
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      flex: 1;
+      max-width: 700px;
       text-align: center;
     }
 
@@ -61,11 +98,12 @@
     .iframe-container {
       position: relative;
       width: 100%;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
     }
 
     .iframe-container iframe {
@@ -77,6 +115,37 @@
       border: none;
     }
 
+    /* Mobile layout: stack image columns under the content */
+    @media (max-width: 900px) {
+      .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 0;
+        position: static;
+      }
+
+      .image-column img {
+        width: 40%;
+        margin: 0.5rem;
+        transform: none !important;
+      }
+
+      .left {
+        order: 2;
+      }
+
+      .right {
+        order: 3;
+      }
+    }
+
     @media (max-width: 600px) {
       h1 {
         font-size: 1.5rem;
@@ -85,23 +154,44 @@
   </style>
 </head>
 <body>
-  <div class="content">
-    <h1>3 Months Together 🎉</h1>
-    <div class="iframe-container">
-      <iframe 
-        src="https://tiermaker.com/create/mn-n-vit-nam-nc-15318455" 
-        allowfullscreen>
-      </iframe>
+  <div class="content-wrapper">
+    <!-- Left Images -->
+    <div class="image-column left">
+      <img src="your-image1.jpg" alt="Memory 1">
+      <img src="your-image2.jpg" alt="Memory 2">
+      <img src="your-image3.jpg" alt="Memory 3">
+      <img src="your-image4.jpg" alt="Memory 4">
+      <img src="your-image5.jpg" alt="Memory 5">
     </div>
 
-    <!-- Spacer (half page) -->
-    <div style="min-height: 100vh;"></div>
+    <!-- Main Content -->
+    <div class="content">
+      <h1>3 Months Together 🎉</h1>
+      <div class="iframe-container">
+        <iframe 
+          src="https://tiermaker.com/create/mn-n-vit-nam-nc-15318455" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <div class="iframe-container">
-      <iframe 
-        src="https://live.tiermaker.com/6193060"  
-        allowfullscreen>
-      </iframe>
+      <!-- Spacer (half page) -->
+      <div style="min-height: 100vh;"></div>
+
+      <div class="iframe-container">
+        <iframe 
+          src="https://live.tiermaker.com/6193060"  
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Right Images -->
+    <div class="image-column right">
+      <img src="your-image6.jpg" alt="Memory 6">
+      <img src="your-image7.jpg" alt="Memory 7">
+      <img src="your-image8.jpg" alt="Memory 8">
+      <img src="your-image9.jpg" alt="Memory 9">
+      <img src="your-image10.jpg" alt="Memory 10">
     </div>
   </div>
 </body>
