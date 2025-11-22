@@ -1,228 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Resume - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Nhat Duong</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Nhat
-                        <span class="text-primary">Duong</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Email:
-                        <a href="mailto:nhat.duong@duke.edu">nhat.duong@duke.edu</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Your Full Name] - Personal Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">Nhat Duong</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <div class="genz-toggle" id="genz-mode-toggle" title="Toggle Gen Z Mode">
+                        <i class="fas fa-ghost" id="genz-icon"></i>
+                        <span>Gen Z Mode</span>
                     </div>
-                    <p class="lead mb-5">I am a PhD student at Duke University in the Computation Biology and Bioinformatics (CBB) program. I'm basically a walking advertisement billboard for the city of Philadelphia! The best city in the world (in my not so biased opinion)!</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/nhat-duong-736434138/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/nhatduongnn"><i class="fab fa-github"></i></a>
-                        <!--<a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a> -->
+                </li>
+                <li class="nav-item">
+                    <div class="theme-toggle" id="theme-mode-toggle" title="Toggle Light/Dark Mode">
+                        <i class="fas fa-sun" id="sun-icon"></i>
+                        <i class="fas fa-moon" id="moon-icon"></i>
                     </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Ph.D. Project, “Revealing the Chromatin Landscape using High Resolution Methylation Assays”</h3>
-                            <div class="subheading mb-3">Duke University</div>
-                            <ul>
-                                <li>Analyzed Dimethyl Sulfate (DMS-seq) data to extract nucleosome and transcription factor (TF) positions</li>
-                                <li>Experimentally tuned DMS behavior on agarose gels to enhance 2nd gen sequencing data quality and reliability</li>
-                                <li>Designed experimental protocols to validate DMS as a DNA methylation reagent for 3rd gen sequencing</li>
-                                <li>Visualized DNA methylation with single fiber resolution to identify structures between cell subpopulations</li>
-                                <li>Adjusted and optimized HMMs to learn DMS methylation patterns to distinguish between different binding TFs</li>
-                                <li>Performed model selection to minimize the numbers of models necessary to include in the HMM</li>
-                            </ul>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2020 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Master’s Thesis Project, "Congenital Heart Defects in 22q11.2 DS patients"</h3>
-                            <div class="subheading mb-3">Drexel University</div>
-                            <ul>
-                                <li>Identified genetic variations between congenital heart defect (CHD) vs non-CHD cohorts of 22q11.2 DS patients</li>
-                                <li>Composed/deployed a WES pipeline to go from .BAM file to Indels/SNP data for cohort of 370 patient samples</li>
-                                <li>Performed quality control to identify loss of function mutations (LOF) in 22q11.2 DS patient data</li>
-                                <li>Determined overrepresented LOF mutations in CHD vs non-CHD cohort utilizing genetic load analysis</li>
-                                <li>Discovered and evaluating a region on chr 9 which may lead to a higher chance of CHD in 22q11.2 DS patients</li>
-                                <li>Incorporated gene and functional analysis with independent genotyping array CNV data to improve WES results</li>
-                            </ul>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2019 - June 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Bioinformatics Intern	</h3>
-                            <div class="subheading mb-3">Children's Hospital of Philadelphia</div>
-                            <ul>
-                                <li>Created a WGS pipeline to take in CNVs calls from 3 individual methods and create one consensus call</li>
-                                <li>Collaborated with partner groups to evaluate trade offs and tune quality control parameters for CNVs merging</li>
-                                <li>Automated the entire process from .VCF/.SEG file to quality control to final consensus using Snakemake</li>
-                                <li>Improved Bionano De novo assembly to accurately call variants of 22q11.2 DS region</li>
-                                <li>Generated map files for all combinations (at the time) of 22q11.2 DS variants to guide De novo assembly of the region in new samples</li>
-                            </ul>
-                            </div>
-                        <div class="flex-shrink-0"><span class="text-primary">April 2019 - March 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Injury Biomechanics Research Student</h3>
-                            <div class="subheading mb-3">Children's Hospital of Philadelphia</div>
-                            <ul>
-                                <li>Processed sled test videos in a post processor to trace back crash test dummy kinematics during a crash</li>
-                                <li>Recreated dummy kinematics in 3D and graphed body part trajectories using MATLAB </li>
-                                <li>Quantified and analyzed acceleration and excursion data to improve children safety in automobile</li>
-                                <li>Applied finite element modelling (FEM) to create crash simulations to verify test data</li>
-                            </ul>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2016 - August 2018</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Education-->
-            <section class="resume-section" id="education">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Duke University</h3>
-                            <div class="subheading mb-3">Doctor of Philosophy</div>
-                            <div>Computation Biology and Bioinformatics</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2020 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Drexel University</h3>
-                            <div class="subheading mb-3">Master of Science</div>
-                            <div>Biomedical Engineering</div>
-                            <p>GPA: 3.95</p>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Biomedical Engineering</div>
-                            <p>GPA: 3.95</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2015 - June 2020</span></div>
-                    </div>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <!--<ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-terminal"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    </ul>-->
-                    <p>Python, Bash, MATLAB, Github, Docker, SQL, Snakemake, HTML, HPC, AutoCAD, Creo, Parametric, Microsoft Office (Excel, PowerPoint, Word), HyperMesh, Meta-Post Processor, TEMA</p>
-                    <div class="subheading mb-3">Wet lab Skills</div>
-                    <!--<ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>-->
-                    <p>Gel electrophoresis, PCR, microscopy, DNA extraction, cell culture, data interpretation</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
-                    <p>Outside of work, I enjoy hanging out with friends and spending time on my different hobbies. I love everything music related from listening/playing/singing to <a href="https://soundcloud.com/duong-le-phuc-nhat">making</a> music. I used to break dance, I dabble in DJ-ing, and my most recent "niche" hobby is wrist watch building.</p>
-                    <p class="mb-0">I love to see beautifully designed rooms and homes. If I could choose an alternative career it would be interior design, however, I'm not good at it</p>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Awards-->
-            <section class="resume-section" id="awards">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Publications and Presentations</h2>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-newspaper text-warning"></i></span>
-                            Co-Author: Shapiro J, Gaonka K, Spielman S, Savonen C, Bethell C, et.al. OpenPBTA: The Open Pediatric Brain Tumor Atlas. Cell Genomics. 2023.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-newspaper text-warning"></i></span>
-                            Co-Author: Maheshwari J, Duong N, Sarfare S, Belwadi A. Evaluating the response of the PIPER scalable human body model across child restraining seats in simulated frontal crashes. Traffic Injury Prevention. 2019.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-film text-warning"></i></span>
-                            Presentation: Revealing the Chromatin Landscape using High Resolution Methylation Assays. ISMB. 2024. Canada
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-film text-warning"></i></span>
-                            Presentation: Genetics of Congenital Heart Defect Differences between 22q11.2 Deletion Syndrome Patients. MidAtlantic Bioinformatics Conference. 2019. Philadelphia.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-film text-warning"></i></span>
-                            Presentation: Efficacy of Booster Seat Design on the Response of the Q6 ATD in Simulated Frontal Sled Impacts. World Congress of Biomechanics. 2018. Ireland.
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                </li>
+            </ul>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-    </body>
+    </nav>
+
+    <header id="about" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 data-key="hero-h1">PhD Candidate in <span class="handwritten">Computational Biology</span></h1>
+                <p data-key="hero-p">PhD candidate in Computational Biology with 5+ years of experience with DNA/RNA genomic data, probabilistic modeling, and large-scale data analysis.</p>
+                <div class="hero-buttons">
+                    <a href="https://github.com/nhatduongnn" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/nhat-duong-736434138" class="btn btn-secondary" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/profile.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </header>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-key="projects-title">My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3 data-key="p1-title">Chromatin Landscape using High Resolution Methylation Assays</h3>
+                    <p data-key="p1-desc">Developed an interpretable Hidden Markov Model (HMM) for chromatin accessibility inference and integrated multiple genomic datasets to identify DNA-binding factors.</p>
+                    <p class="technologies">Bayesian modeling, HMM, Python, R, Snakemake</p>
+                </div>
+                <div class="project-card">
+                    <h3 data-key="p2-title">Congenital Heart Defects in 22q11.2 DS patients</h3>
+                    <p data-key="p2-desc">Developed a WES pipeline for a cohort of 370 patient samples and conducted loss-of-function mutation analysis to identify genetic variants in a congenital heart defect cohort.</p>
+                    <p class="technologies">WES, Variant Calling, CNV Analysis, Bash</p>
+                </div>
+                <div class="project-card">
+                    <h3 data-key="p3-title">Bioinformatics Consensus Pipeline</h3>
+                    <p data-key="p3-desc">Built a WGS pipeline to take in CNV calls from 3 individual methods and create one consensus call, improving variant calling accuracy for the 22q11.2 DS region.</p>
+                    <p class="technologies">WGS, Bionano De novo assembly, Pipeline Development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-key="exp-title">My Journey & Skills</h2>
+            <div class="experience-content">
+                <div class="work-experience">
+                    <h3 data-key="exp-work-title">Work Experience</h3>
+                    <div class="experience-item">
+                        <h4 data-key="job1-title">Ph.D. Project</h4>
+                        <h5>Duke University School of Medicine | August 2020 - Present</h5>
+                        <p data-key="job1-desc">Developed interpretable Hidden Markov Model (HMM) for chromatin accessibility inference, integrated diverse genomic datasets, and designed experimental protocols to validate new DNA methylation reagents for 3rd gen sequencing.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 data-key="job2-title">Master’s Thesis Project</h4>
+                        <h5>Drexel University | April 2019 - June 2020</h5>
+                        <p data-key="job2-desc">Developed a whole-exome sequencing (WES) pipeline for 370 patient samples, integrated gene function with CNV data, and conducted loss-of-function analysis to identify genetic variants in a congenital heart defect cohort.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h4 data-key="job3-title">Bioinformatics Intern</h4>
+                        <h5>Children’s Hospital of Philadelphia | April 2019 - March 2020</h5>
+                        <p data-key="job3-desc">Built a WGS pipeline to create a consensus CNV call from three individual methods and improved Bionano De novo assembly to accurately call variants of the 22q11.2 DS region.</p>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h3 data-key="exp-skills-title">My Tech Stack</h3>
+                    <div class="skills-grid">
+                        <span class="skill-tag">Python</span><span class="skill-tag">R</span><span class="skill-tag">MATLAB</span><span class="skill-tag">SQL</span><span class="skill-tag">Bash</span><span class="skill-tag">Docker</span><span class="skill-tag">GitHub</span><span class="skill-tag">Snakemake</span><span class="skill-tag">HPC</span><span class="skill-tag">PyTorch</span><span class="skill-tag">Scikit-learn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hobbies" class="hobbies">
+        <div class="container">
+            <h2 class="section-title" data-key="hobbies-title">Outside the Lab</h2>
+            <div class="hobby-card">
+                <i class="fab fa-soundcloud"></i>
+                <h3 data-key="soundcloud-title">Music Production</h3>
+                <p data-key="soundcloud-desc">When I'm not crunching data, I'm producing music. Check out my latest tracks on SoundCloud.</p>
+                <a href="https://soundcloud.com/duong-le-phuc-nhat" class="btn btn-primary" target="_blank" data-key="soundcloud-btn">Listen Here</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-key="contact-title">Get In Touch</h2>
+            <p data-key="contact-p">Got a project, a question, or just wanna say hi? My inbox is always open.</p>
+            <a href="mailto:nhat.duong@duke.edu" class="email">nhat.duong@duke.edu</a>
+            <div class="social-links">
+                <a href="https://github.com/nhatduongnn" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nhat-duong-736434138" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-key="footer-text">&copy; 2025 Nhat Duong. Built with  चाय and code.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
 </html>
