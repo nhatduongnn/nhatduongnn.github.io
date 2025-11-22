@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const professionalText = {};
     const genzText = {
-        'hero-h1': "PhD Candidate in <span class='handwritten'>Computational Biology</span>",
+        'hero-h1': "PhD Candidate in <span class='handwritten'>Computational Biology (Fr Fr)</span>",
         'hero-p': "Lowkey a data wizard with 5+ years of experience in genomics and probabilistic modeling. It's giving... science.",
-        'projects-title': "What I've Been Building",
+        'projects-title': "What I Cooked Up",
         'p1-title': "Chromatin Landscape Deep Dive",
         'p1-desc': "Used a real big brain HMM model to figure out chromatin accessibility. The data integration was chef's kiss.",
         'p-view-live': "See it Live",
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'p2-desc': "Built a WES pipeline for like 370 samples to find genetic variants. We were in our variant calling era.",
         'p3-title': "Bioinformatics Pipeline Thingy",
         'p3-desc': "Made a WGS pipeline that takes three CNV calls and makes one big consensus call. It's the main character of variant calling.",
-        'exp-title': "My Vibe & The Tech I Fw",
+        'exp-title': "My Vibe & My Tech Rizz",
         'exp-work-title': "Where I've Been",
         'job1-title': "PhD Grind",
         'job1-desc': "Cooking up some fire HMMs and integrating genomic datasets. It's a vibe.",
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'job2-desc': "Built a whole WES pipeline and did some mutation analysis. We ate that.",
         'job3-title': "Bioinformatics Intern",
         'job3-desc': "Built a WGS pipeline and improved some De novo assembly. The glow up was real.",
-        'exp-skills-title': "My Go-To Tech",
+        'exp-skills-title': "My Go-To Tech (No Cap)",
         'contact-title': "Slide Into My DMs",
         'contact-p': "Got a wild idea, a question, or just wanna say 'yuh'? My inbox is open. Bet.",
         'hobbies-title': "When I'm Not Coding",
