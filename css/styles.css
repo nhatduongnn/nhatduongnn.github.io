@@ -196,14 +196,14 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--accent-primary);
+    background-color: transparent;
     border-color: var(--accent-primary);
-    color: var(--bg-color);
+    color: var(--accent-primary);
 }
 
 .btn-primary:hover {
-    background-color: transparent;
-    color: var(--accent-primary);
+    background-color: var(--accent-primary);
+    color: var(--bg-color);
     transform: translateY(-3px);
 }
 
@@ -215,6 +215,18 @@ body {
 
 .btn-secondary:hover {
     background-color: var(--accent-secondary);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+.btn-soundcloud {
+    background-color: transparent;
+    border-color: var(--accent-tertiary);
+    color: var(--accent-tertiary);
+}
+
+.btn-soundcloud:hover {
+    background-color: var(--accent-tertiary);
     color: var(--bg-color);
     transform: translateY(-3px);
 }
@@ -436,7 +448,7 @@ section {
 }
 .hobby-card .fa-soundcloud {
     font-size: 4rem;
-    color: var(--accent-primary);
+    color: var(--accent-tertiary);
     margin-bottom: 20px;
 }
 
